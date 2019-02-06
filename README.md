@@ -37,9 +37,9 @@
 
 ## 页面布局
 
-![](.\img\QQ图片20190204192244.png)
+![](https://github.com/Zhuanglijuan/mmall-fe/blob/mmall_v1.0/img/QQ图片20190204192244.png)
 
-![QQ图片20190204192504](.\img\QQ图片20190204192504.png)
+![QQ图片20190204192504](https://github.com/Zhuanglijuan/mmall-fe/blob/mmall_v1.0/img/QQ图片20190204192504.png)
 
-![QQ图片20190204193223](.\img\QQ图片20190204193223.png)
+![QQ图片20190204193223](https://github.com/Zhuanglijuan/mmall-fe/blob/mmall_v1.0/img/QQ图片20190204193223.png)
 
