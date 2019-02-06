@@ -19,13 +19,14 @@ var getHtmlConfig = function (name, title) {
 
 var config = {
     entry: {
-        'common': ['./src/page/common/index.js'],
-        'index': ['./src/page/index/index.js']
+        'common': ['./src/page/common/common.js'],
+        'index': ['./src/page/index/index.js'],
+        'result': ['./src/page/result/result.js']
     },
     output: {
-        filename: 'js/[name].js',
+        path: './dist',
         publicPath: '/dist',
-        path: 'E:\\dev-program\\mmall-fe\\dist'
+        filename: 'js/[name].js'
     },
     externals: {
         'jquery': 'window.jQuery'
@@ -37,6 +38,15 @@ var config = {
             {test: /\.string$/, loader: 'html-loader'}
         ]
     },
+    resolve: {
+        alias: {
+            util: __dirname + '/src/util',
+            page: __dirname + '/src/page',
+            service: __dirname + '/src/service',
+            image: __dirname + '/src/image',
+            node_modules: __dirname + '/node_modules'
+        }
+    },
     plugins: [
         // 独立通用模块到js/base.js
         new webpack.optimize.CommonsChunkPlugin({
@@ -46,7 +56,8 @@ var config = {
         // 把css单独打包到文件里
         new ExtractTextPlugin("css/[name].css"),
         // html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig('index', '首页'))
+        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ]
 };
 
