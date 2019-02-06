@@ -34,3 +34,12 @@
 - 安装：npm install webpack-dev-server --save-dev
 - 配置：`webpack-dev-server/client?http://localhost:8080`
 - 使用：`webpack-dev-server --port 8088 --inline`
+
+## 页面布局
+
+![](.\img\QQ图片20190204192244.png)
+
+![QQ图片20190204192504](.\img\QQ图片20190204192504.png)
+
+![QQ图片20190204193223](.\img\QQ图片20190204193223.png)
+
