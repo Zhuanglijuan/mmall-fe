@@ -28,6 +28,15 @@ var config = {
         publicPath: '/dist',
         filename: 'js/[name].js'
     },
+    devServer: {
+        proxy: {
+            '/**': {
+                target: 'http://www.happymmall.com',
+                changeOrigin: true,
+                secure: false
+            }
+        }
+    },
     externals: {
         'jquery': 'window.jQuery'
     },
