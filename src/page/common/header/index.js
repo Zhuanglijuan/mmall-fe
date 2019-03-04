@@ -1,8 +1,8 @@
 'use strict';
-require('./header.css');
+require('./index.css');
 var _mm = require('util/mm.js');
 // 通用页面头部
-var header = {
+var index = {
     init: function () {
         this.onLoad();
         this.bindEvent();
@@ -41,4 +41,4 @@ var header = {
     }
 };
 
-header.init();
+index.init();

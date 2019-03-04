@@ -1,12 +1,11 @@
-/*css reset*/
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #f6f6f6;
-    font: 12px/1.5 Tahoma, Arial, "Microsoft YaHei UI", sans-serif;
+    background: #f6f6f6;
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
 }
 
 li {
@@ -26,7 +25,7 @@ input[type='checkbox'] {
     cursor: pointer;
 }
 
-/*定宽布局*/
+/* 定宽布局 */
 .w {
     width: 1080px;
     margin: 0 auto;
@@ -34,15 +33,35 @@ input[type='checkbox'] {
     overflow: hidden;
 }
 
-/*全局通用样式*/
-/*隐藏类*/
+/* panel */
+.panel {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.panel .panel-title {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.panel .panel-body {
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* 全局通用样式 */
+/* 隐藏类 */
 .hide {
     display: none;
 }
 
-/*超链样式*/
+/* 超链样式 */
 .link {
-    color: #999999;
+    color: #999;
     cursor: pointer;
     text-decoration: none;
 }
@@ -52,11 +71,11 @@ input[type='checkbox'] {
 }
 
 .link-text {
-    color: #999999;
+    color: #999;
     text-decoration: none;
 }
 
-/*btn*/
+/* btn */
 .btn {
     display: inline-block;
     padding: 0 20px;
@@ -64,7 +83,7 @@ input[type='checkbox'] {
     line-height: 40px;
     vertical-align: middle;
     border: none;
-    background-color: #c60023;
+    background: #c60023;
     font-size: 17px;
     font-weight: bold;
     color: #fff;
@@ -80,14 +99,14 @@ input[type='checkbox'] {
     padding: 0 10px;
 }
 
-/*loading*/
+/* loading */
 .loading {
     margin: 10px auto;
     display: block;
+    width: 65px;
+    height: 65px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background: url(../../image/icon/loading.gif) no-repeat;
-    width: 65px;
-    height: 65px;
     opacity: .6;
 }
