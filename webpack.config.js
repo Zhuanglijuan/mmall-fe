@@ -30,7 +30,8 @@ var config = {
         'user-center-update': ['./src/page/user-center-update/index.js'],
         'user-pass-update'  : ['./src/page/user-pass-update/index.js'],
         'list'              : ['./src/page/list/index.js'],
-        'detail'            : ['./src/page/detail/index.js']
+        'detail'            : ['./src/page/detail/index.js'],
+        'cart'              : ['./src/page/cart/index.js']
     },
     output: {
         path: './dist',
@@ -38,8 +39,6 @@ var config = {
         filename: 'js/[name].js'
     },
     devServer: {
-        historyApiFallback: true,
-        hot: true,
         inline: true,
         proxy: {
             '**/*.do': {
@@ -86,7 +85,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
-        new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页'))
+        new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
+        new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车'))
     ]
 };
 
