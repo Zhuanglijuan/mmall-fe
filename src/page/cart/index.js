@@ -8,7 +8,7 @@ var templateIndex   = require('./index.string');
 
 var page = {
     data : {
-        
+
     },
     init : function(){
         this.onLoad();
@@ -92,17 +92,17 @@ var page = {
                 _this.showCartError();
             });
         });
-        // 删除单个商品
-        $(document).on('click', '.cart-delete', function(){
-            if(window.confirm('确认要删除该商品？')){
-                var productId = $(this).parents('.cart-table')
-                    .data('product-id');
+        //单个商品删除
+        $(document).on('click', '.cart-delete', function () {
+            var $this = $(this);
+            _mm.confirmTips('确认要删除该商品？', function () {
+                var productId = $this.parents('.cart-table').data('product-id');
                 _this.deleteCartProduct(productId);
-            }
+            });
         });
         // 删除选中商品
         $(document).on('click', '.delete-selected', function(){
-            if(window.confirm('确认要删除选中的商品？')){
+            _mm.confirmTips('确认要删除选中的商品吗？', function () {
                 var arrProductIds = [],
                     $selectedItem = $('.cart-select:checked');
                 // 循环查找选中的productIds
@@ -115,8 +115,8 @@ var page = {
                 }
                 else{
                     _mm.errorTips('您还没有选中要删除的商品');
-                }  
-            }
+                }
+            });
         });
         // 提交购物车
         $(document).on('click', '.btn-submit', function(){

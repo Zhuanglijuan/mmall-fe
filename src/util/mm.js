@@ -1,5 +1,6 @@
 'use strict';
 var Hogan = require('hogan.js');
+var _dialog = require('util/dialog/index.js');
 var conf = {
     serverHost : ''
 };
@@ -48,12 +49,47 @@ var _mm = {
         return result;
     },
     // 成功提示
-    successTips : function(msg){
-        alert(msg || '操作成功！');
+    successTips: function (msg) {
+        _dialog.show({
+            isConfirm: false,
+            message: msg || '操作成功！',
+            target: 'body',
+            onConfirm: function () {
+                _dialog.hide();
+            },
+            onCancel: function () {
+            }
+        });
     },
     // 错误提示
-    errorTips : function(msg){
-        alert(msg || '哪里不对了~');
+    errorTips: function (msg) {
+        _dialog.show({
+            isConfirm: false,
+            message: msg || '哪里不好了~',
+            target: 'body',
+            onConfirm: function () {
+                _dialog.hide();
+            },
+            onCancel: function () {
+
+            }
+        });
+    },
+    //确认操作弹窗
+    confirmTips: function (msg, confirm, cancel) {
+        _dialog.show({
+            isConfirm: true,
+            message: msg || '是否确认该操作？',
+            target: 'body',
+            onConfirm: function () {
+                _dialog.hide();
+                typeof  confirm === 'function' && confirm();
+            },
+            onCancel: function () {
+                _dialog.hide();
+                typeof  cancel === 'function' && cancel();
+            }
+        });
     },
     // 字段的验证，支持非空、手机、邮箱的判断
     validate : function(value, type){
