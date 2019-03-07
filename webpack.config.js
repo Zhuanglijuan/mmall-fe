@@ -35,7 +35,8 @@ var config = {
         'cart'              : ['./src/page/cart/index.js'],
         'order-confirm'     : ['./src/page/order-confirm/index.js'],
         'order-list'        : ['./src/page/order-list/index.js'],
-        'order-detail'      : ['./src/page/order-detail/index.js']
+        'order-detail'      : ['./src/page/order-detail/index.js'],
+        'payment'           : ['./src/page/payment/index.js']
     },
     output: {
         path: './dist',
@@ -93,7 +94,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认')),
         new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
-        new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情'))
+        new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
+        new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付'))
     ]
 };
 
